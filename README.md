@@ -1,2 +1,7 @@
-# AWS_EMR_Amazon-Elastic-MapReduce
-AWS_EMR_Amazon Elastic MapReduce
+# AWS_EMR (Amazon-Elastic-MapReduce)
+
+
+
+
+
+
