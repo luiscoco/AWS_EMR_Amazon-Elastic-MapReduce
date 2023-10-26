@@ -20,6 +20,21 @@ El sistema también está integrado con otros servicios de AWS y nos proporciona
 
 Se puede usar **Jupyter Lab** usando **Apache Livy**.
 
+## Arquitectura de EMR
 
+**EMR** tiene tres tipos de nodos:
 
+**Master**: Los nodos Master deben estar en funcionamiento para dar servicio al clúster.
+
+Se pueden desplegar varios para tener alta disponibilidad. 
+
+Por defecto, alojan servicios como Hive Metastore.
+
+**Core**: Estos nodos se encargan de almacenar los datos en HDFS y ejecutar los trabajos, también se pueden escalar.
+
+**Task**: Estos nodos no almacenan datos por lo que se pueden añadir y eliminar sin riesgos de pérdida de datos. 
+
+Se usan par añadir capacidad de procesamiento al clúster.
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ec875d11-635f-4d4f-a0ef-a25d31626cb7)
 
