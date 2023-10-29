@@ -1,8 +1,16 @@
 # AWS_EMR (Amazon-Elastic-MapReduce)
 
-https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html
+## Youtube videos
 
-## ¿Qué es Amazon EMR?
+AWS EMR Cluster Create using AWS Console | Submitting Spark Jobs in AWS EMR Cluster:
+https://www.youtube.com/watch?v=XRGveXDutKM
+
+
+
+
+## ¿Qué es AWS EMR?
+
+https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html
 
 **EMR** es una plataforma gestionada en AWS que nos permite ejecutar trabajos **Big Data** con el ecosistema **Hadoop** como motor de procesamiento distribuido. 
 
