@@ -1,4 +1,4 @@
-# AWS_EMR (Amazon-Elastic-MapReduce)
+# AWS EMR (Amazon-Elastic-MapReduce)
 
 ## Youtube videos
 
