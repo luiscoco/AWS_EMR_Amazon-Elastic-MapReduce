@@ -20,6 +20,9 @@ Running an Amazon EMR Cluster in the AWS Academy Data Engineering Sandbox:
 
 https://www.youtube.com/watch?v=radrkdkUI0U
 
+AWS EMR videos by Dr. Sian Lun:
+https://www.youtube.com/@sianlun/videos
+
 ## ¿Qué es AWS EMR?
 
 https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html
