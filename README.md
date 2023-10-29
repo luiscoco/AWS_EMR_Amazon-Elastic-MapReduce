@@ -3,16 +3,22 @@
 ## Youtube videos
 
 AWS EMR Cluster Create using AWS Console | Submitting Spark Jobs in AWS EMR Cluster:
+
 https://www.youtube.com/watch?v=XRGveXDutKM
 
 AWS EMR Big Data Processing with Spark and Hadoop | Python, PySpark, Step by Step Instructions: 
 
 https://www.youtube.com/watch?v=a_3Md9nV2Mk
 
-How to process big data workloads with spark on AWS EMR: https://www.youtube.com/watch?v=6OEwdJbnDY8
+How to process big data workloads with spark on AWS EMR: 
+
+https://www.youtube.com/watch?v=6OEwdJbnDY8
 
 https://github.com/Primus-Learning/emr-spark-job-to-process-data/tree/main
 
+Running an Amazon EMR Cluster in the AWS Academy Data Engineering Sandbox:
+
+https://www.youtube.com/watch?v=radrkdkUI0U
 
 ## ¿Qué es AWS EMR?
 
