@@ -179,6 +179,9 @@ Respecto al escalado del cluster, elegimos escalado del cluster manual:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/cf882afe-6f36-4dc9-8c34-d6ee8f4b8449)
 
+Elegimos la VPC por defecto creada en nuestra cuenta de AWS. Respecto a la subnet, elegimos una de las tres subnets que integran la default VPC de nuestra cuenta.
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6b278626-f4b0-4637-9b69-b1b225a88971)
 
 
 
