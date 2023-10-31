@@ -337,11 +337,11 @@ O conexión mediante Mac o Linux
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/27fa7995-9832-404c-96c6-9ebc2d5e9109)
 
-## 8. Amazon EMR - Configuring Putty
+## 8. AWS EMR - Configuración de Putty para conexión con el Nodo Primario en Windows
 
 Primero seleccionamos la opción **Session** e introducimos el nombre del servidor "hadoop@ec2-52-47-194-255.eu-west-3.compute.amazonaws.com" el protocolo de conexión SSH y el puerto 22
 
-![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/aed221ad-f031-4009-a66b-9e1068f3c539)
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ef8cfc82-7372-40cf-a6f9-b4b385c058c9)
 
 Posteriormente elegimos la opción **SSH->Auth->Credentials** y subimos el archivo **ppk** que generamos cuando creamos el Key-Pair en AWS.
 
@@ -351,5 +351,18 @@ Damos un nombre a la Session y pulsamos el botón **Save** para guardar los dato
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/39981c6f-c709-4739-9940-c14d3bca09c4)
 
-Como último paso 
+Como último paso pulsamos el botón **open** para conectarnos con el Primary Node del AWS EMR cluster
+
+La primera vez que nos conectamos nos aparece este mensaje. Pulsamos en el botón **Aceptar**
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/64ee5d09-c9ef-48f9-861d-d045878606f4)
+
+Posteriormente ya nos aparece la siguiente pantalla. Vemos que hemos accedido con el usuario **hadoop** y con la autenticación mediante el **Key-Pair**
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d71c93c0-7fc7-41e4-a5e5-dc2336fdae33)
+
+
+## 9. Probamos comandos Scala y Spark dentro de nuestro AWS EMR
+
+
 
