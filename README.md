@@ -149,6 +149,21 @@ VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
 
 ## ¿Cómo crear un nuevo cluster AWS EMR?
 
+Primero asignamos un nombre al AWS EMR Cluster
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/f51d1fa0-4e1c-445d-a1d0-909acbe00a1e)
+
+Posteriormente elegimos una version del servicio AWS EMR
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6dc07758-46b0-47e0-9448-3ad907670d67)
+
+A continuación elegimos las aplicaciones de BigData que vamos a instalar en el cluster:
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d0ab1396-0bc3-41f3-9d36-e122bc1b5724)
+
+
+
+
 IAM 
 
 EMR_DefaultRole
