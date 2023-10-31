@@ -265,8 +265,9 @@ Dejamos los valores por defecto:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/91b15915-6517-43d6-a04f-a3aa9d74a997)
 
+Después de pulsar el valor de **"Create key pair"**, automáticamente se decarga el archivo **ppk** en nuestro ordenador
 
-
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6eb18812-7990-4235-a2bf-8c6e940e9d92)
 
 ### 8.13. IAM (Identity and Access Management)
 
