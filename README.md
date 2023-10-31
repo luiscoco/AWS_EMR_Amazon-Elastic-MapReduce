@@ -261,7 +261,9 @@ Dejamos los valores por defecto:
 
 **NOTA IMPORTANTE:** Como paso previo tenemos que crear un Key-Pair y descargar su archivo en nuestro ordenador personal.
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/505e669d-fba6-4788-80bb-5f1a724f01b2)
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/91b15915-6517-43d6-a04f-a3aa9d74a997)
 
 
 
