@@ -179,18 +179,6 @@ VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/cf882afe-6f36-4dc9-8c34-d6ee8f4b8449)
 
-### 8.8. VPC y Subnet
-
-Elegimos la VPC por defecto creada en nuestra cuenta de AWS. Respecto a la subnet, elegimos una de las tres subnets que integran la default VPC de nuestra cuenta.
-
-![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6b278626-f4b0-4637-9b69-b1b225a88971)
-
-Podemos consultar las VPC y las subnets disponibles
-
-![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/5c189763-7de2-4ff0-a78a-610522497ed1)
-
-![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/80f4910b-ee72-4e39-96c1-2f984bb5d039)
-
 ### 8.7. For your subnet to communicate with external sources
 
 As previous stFor your subnet to communicate with external sources:
@@ -237,10 +225,19 @@ Target: The NAT Gateway you just created.
 
 After making these changes, your subnet should have a route to external sources,
 
+### 8.8. VPC y Subnet
 
+Elegimos la VPC por defecto creada en nuestra cuenta de AWS. Respecto a la subnet, elegimos una de las tres subnets que integran la default VPC de nuestra cuenta.
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6b278626-f4b0-4637-9b69-b1b225a88971)
 
-IAM 
+Podemos consultar las VPC y las subnets disponibles
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/5c189763-7de2-4ff0-a78a-610522497ed1)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/80f4910b-ee72-4e39-96c1-2f984bb5d039)
+
+### 8.9. IAM (Identity and Access Management)
 
 EMR_DefaultRole
 
