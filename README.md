@@ -165,6 +165,11 @@ Respecto al sistema operativo elegimos Linux:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/55b6a195-2e05-4ba7-9af9-6904fe582700)
 
+Elegimos la opción "Grupos de instancias".
+
+**Un tipo de instancia por grupo de nodos**
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/e24f5c04-a851-4211-8949-3fb026877d3c)
 
 
 IAM 
