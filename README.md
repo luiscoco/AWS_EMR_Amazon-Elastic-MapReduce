@@ -237,6 +237,35 @@ Podemos consultar las VPC y las subnets disponibles
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/80f4910b-ee72-4e39-96c1-2f984bb5d039)
 
+### 8.9. Elegimos el tipo de Terminación del AWS EMR
+
+En nuestro caso elegimos el tipo de terminación del cluster "Manual"
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/96de6987-6e98-4c91-9a70-0f7fa7ca130a)
+
+### 8.10. Elegimos las "Bootstrap actions" y el "Cluster Logs"
+
+Dejamos los valores por defecto:
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/42c0214f-a8c2-4eac-9721-bc521cd2b4f1)
+
+### 8.11. "Tags" y "Edit software settings"
+
+Dejamos los valores por defecto: 
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/e0e57bd8-8dba-4ccd-a317-f02e785f3e96)
+
+### 8.12. Security configuration and EC2 key pair 
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/2d959a3f-3ed6-4e1a-b158-07f831885b57)
+
+**NOTA IMPORTANTE:** Como paso previo tenemos que crear un Key-Pair y descargar su archivo en nuestro ordenador personal.
+
+
+
+
+
+
 ### 8.9. IAM (Identity and Access Management)
 
 Tenemos que crear el "Service Role" y el "Instance Profile" para las instancias EC2 de nuestro cluster.
