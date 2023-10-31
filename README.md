@@ -149,3 +149,8 @@ VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
 
 ## ¿Cómo crear un nuevo cluster AWS EMR?
 
+IAM 
+
+EMR_DefaultRole
+
+EMR_EC2_DefaultRole->AmazonEMRFullAccessPolicy_v2
