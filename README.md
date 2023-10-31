@@ -173,6 +173,8 @@ Elegimos la opción "Grupos de instancias".
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/b69da727-a59f-41cf-a522-cab917bd6363)
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/984bb374-7620-4b37-a59a-2d3c586911b6)
+
 
 IAM 
 
