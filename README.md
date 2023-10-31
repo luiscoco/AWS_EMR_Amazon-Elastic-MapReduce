@@ -311,4 +311,10 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c2a39772-04f8-4a41-8da5-6c9de3990a79)
 
+### 8.14. Pulsamos el botón "Create cluster"
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d95ff2c6-316e-44e5-ab00-82c9051b8225)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d7a5953a-4df6-4ec0-9539-6f6d7bde4eca)
+
 
