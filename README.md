@@ -266,11 +266,11 @@ Dejamos los valores por defecto:
 
 
 
-### 8.9. IAM (Identity and Access Management)
+### 8.13. IAM (Identity and Access Management)
 
 Tenemos que crear el "Service Role" y el "Instance Profile" para las instancias EC2 de nuestro cluster.
 
-#### 8.9.1. Primero: creamos el "Service Role"
+#### 8.13.1. Primero: creamos el "Service Role"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ecbaeaeb-5c94-451d-a412-5a01a9e0abda)
 
@@ -286,7 +286,7 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c674c8b2-2c1e-4ebc-955d-45c2d5618c26)
 
-#### 8.9.2. Segundo: cremos el "Instance Profile"
+#### 8.13.2. Segundo: cremos el "Instance Profile"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/10c81cff-cccf-467d-8cec-57ba962d3c1b)
 
@@ -300,7 +300,3 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/53fcc013-00e4-4b17-ac24-0823a86dd44c)
 
-
-EMR_DefaultRole
-
-EMR_EC2_DefaultRole->AmazonEMRFullAccessPolicy_v2
