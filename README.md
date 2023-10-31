@@ -161,6 +161,9 @@ A continuación elegimos las aplicaciones de BigData que vamos a instalar en el 
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d0ab1396-0bc3-41f3-9d36-e122bc1b5724)
 
+Respecto al sistema operativo elegimos Linux:
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/55b6a195-2e05-4ba7-9af9-6904fe582700)
 
 
 
