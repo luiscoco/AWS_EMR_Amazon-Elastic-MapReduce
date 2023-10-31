@@ -257,7 +257,9 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 #### 8.9.2. Segundo: cremos el "Instance Profile"
 
-#### 8.9.2. Segundo: creamos el "Instance Profile"
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/b4edb5b5-d981-4463-8444-2d92ae6672ef)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/81c79c41-464e-4939-b88d-4e79f4317f55)
 
 
 
