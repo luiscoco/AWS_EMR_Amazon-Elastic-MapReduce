@@ -1,6 +1,6 @@
 # AWS EMR (Amazon-Elastic-MapReduce)
 
-## Youtube videos
+## 1. Youtube videos
 
 AWS EMR Cluster Create using AWS Console | Submitting Spark Jobs in AWS EMR Cluster:
 
@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=radrkdkUI0U
 AWS EMR videos by Dr. Sian Lun:
 https://www.youtube.com/@sianlun/videos
 
-## ¿Qué es AWS EMR?
+## 2. ¿Qué es AWS EMR?
 
 https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html
 
@@ -43,7 +43,7 @@ El sistema también está integrado con otros servicios de AWS y nos proporciona
 
 Se puede usar **Jupyter Lab** usando **Apache Livy**.
 
-## Arquitectura de EMR
+## 3. Arquitectura de EMR
 
 **EMR** tiene tres tipos de nodos:
 
@@ -63,7 +63,7 @@ Se usan par añadir capacidad de procesamiento al clúster.
 
 Entre las opciones de despliegue que tiene EMR podemos elegir pago por uso, en función del tiempo o ahorrar en costes usando instancias reservadas, planes de ahorro o instancias spot de AWS.
 
-## Escalado en Amazon EMR
+## 4. Escalado en Amazon EMR
 
 En función de las cargas de trabajo que queramos ejecutar, podemos desplegar **clusters específicos** para la duración de nuestro trabajo o bien tener un **clúster permanente** con alta disponibilidad y auto escalable en función de la demanda. 
 
@@ -77,7 +77,7 @@ En el caso de trabajos de streaming con **Spark Streaming** deberemos analizar m
 
 Es posible que el clúster pueda añadir capacidad automáticamente pero cuando el volumen de trabajo vuelva a disminuir **no sea capaz de reducir el número de nodos**, aumentando los costes considerablemente.
 
-## Almacenamiento en Amazon EMR
+## 5. Almacenamiento en Amazon EMR
 
 Debemos entender que EMR proporciona dos formas de almacenamiento:
 
@@ -95,7 +95,7 @@ En trabajos en los que no se realicen muchas operaciones de lectura, podremos us
 
 En los trabajos con muchas lecturas iterativas (por ejemplo **Machine Learning**), nos beneficiaremos más de un sistema como **HDFS**.
 
-## Aplicationes que se pueden incluir en AWS EMR 
+## 6. Aplicationes que se pueden incluir en AWS EMR 
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/16aa1cc5-4199-4401-a7ac-190b2dda86ed)
 
@@ -143,29 +143,29 @@ These tools collectively form a powerful ecosystem for big data processing, anal
 
 They enable various tasks such as data storage, processing, monitoring, and analysis in large-scale distributed systems.
 
-## Amazon EMR - Configuring Putty
+## 7. Amazon EMR - Configuring Putty
 
 VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
 
-## ¿Cómo crear un nuevo cluster AWS EMR?
+## 8. ¿Cómo crear un nuevo cluster AWS EMR?
 
-Primero asignamos un nombre al AWS EMR Cluster
+### 8.1. Primero asignamos un nombre al AWS EMR Cluster
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/f51d1fa0-4e1c-445d-a1d0-909acbe00a1e)
 
-Posteriormente elegimos una version del servicio AWS EMR
+### 8.2. Posteriormente elegimos una version del servicio AWS EMR
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6dc07758-46b0-47e0-9448-3ad907670d67)
 
-A continuación elegimos las aplicaciones de BigData que vamos a instalar en el cluster:
+### 8.3. A continuación elegimos las aplicaciones de BigData que vamos a instalar en el cluster:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d0ab1396-0bc3-41f3-9d36-e122bc1b5724)
 
-Respecto al sistema operativo elegimos Linux:
+### 8.4. Respecto al sistema operativo elegimos Linux:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/55b6a195-2e05-4ba7-9af9-6904fe582700)
 
-Elegimos la opción "Grupos de instancias".
+### 8.5. Elegimos la opción "Grupos de instancias".
 
 **Un tipo de instancia por grupo de nodos**
 
@@ -175,13 +175,68 @@ Elegimos la opción "Grupos de instancias".
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/984bb374-7620-4b37-a59a-2d3c586911b6)
 
-Respecto al escalado del cluster, elegimos escalado del cluster manual:
+### 8.6. Respecto al escalado del cluster, elegimos escalado del cluster manual:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/cf882afe-6f36-4dc9-8c34-d6ee8f4b8449)
+
+### 8.8. VPC y Subnet
 
 Elegimos la VPC por defecto creada en nuestra cuenta de AWS. Respecto a la subnet, elegimos una de las tres subnets que integran la default VPC de nuestra cuenta.
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6b278626-f4b0-4637-9b69-b1b225a88971)
+
+Podemos consultar las VPC y las subnets disponibles
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/5c189763-7de2-4ff0-a78a-610522497ed1)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/80f4910b-ee72-4e39-96c1-2f984bb5d039)
+
+### 8.7. For your subnet to communicate with external sources
+
+As previous stFor your subnet to communicate with external sources:
+
+a) you need to add a default route (0.0.0.0/0) pointing to either an Internet Gateway (if it's a public subnet)
+
+b) or a NAT Gateway (if it's a private subnet).
+
+Here's what you can do:
+
+**a) Internet Gateway (for public subnet):**
+
+- Go to the AWS VPC Console.
+
+- Navigate to the "Internet Gateways" section.
+
+- Create an Internet Gateway if you haven't already.
+
+- Attach the Internet Gateway to your VPC.
+
+- Go back to the route table (rtb-04c42678a04496623) for subnet-0c773b8ac5250a86a and add a route:
+
+- Destination: 0.0.0.0/0
+
+- Target: The Internet Gateway you just attached.
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/36540288-6c17-4223-8504-3671bffc406d)
+
+**b) NAT Gateway (for private subnet):**
+
+Go to the AWS VPC Console.
+
+Navigate to the "NAT Gateways" section.
+
+Create a NAT Gateway if you haven't already.
+
+Make sure the NAT Gateway is in a public subnet.
+
+Go back to the route table (rtb-04c42678a04496623) for subnet-0c773b8ac5250a86a and add a route:
+
+Destination: 0.0.0.0/0
+
+Target: The NAT Gateway you just created.
+
+After making these changes, your subnet should have a route to external sources,
+
 
 
 
