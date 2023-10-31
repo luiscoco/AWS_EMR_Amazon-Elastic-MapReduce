@@ -175,6 +175,12 @@ Elegimos la opción "Grupos de instancias".
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/984bb374-7620-4b37-a59a-2d3c586911b6)
 
+Respecto al escalado del cluster, elegimos escalado del cluster manual:
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/cf882afe-6f36-4dc9-8c34-d6ee8f4b8449)
+
+
+
 
 IAM 
 
