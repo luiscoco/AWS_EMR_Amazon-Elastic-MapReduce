@@ -143,10 +143,9 @@ These tools collectively form a powerful ecosystem for big data processing, anal
 
 They enable various tasks such as data storage, processing, monitoring, and analysis in large-scale distributed systems.
 
-
-
-
-
 ## Amazon EMR - Configuring Putty
 
 VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
+
+## ¿Cómo crear un nuevo cluster AWS EMR?
+
