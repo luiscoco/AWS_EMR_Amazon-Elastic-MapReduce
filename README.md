@@ -257,9 +257,7 @@ Dejamos los valores por defecto:
 
 ### 8.12. Security configuration and EC2 key pair 
 
-![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/2d959a3f-3ed6-4e1a-b158-07f831885b57)
-
-**NOTA IMPORTANTE:** Como paso previo tenemos que crear un Key-Pair y descargar su archivo en nuestro ordenador personal.
+Como paso previo tenemos que crear un Key-Pair y descargar su archivo en nuestro ordenador personal.
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/505e669d-fba6-4788-80bb-5f1a724f01b2)
 
@@ -268,6 +266,10 @@ Dejamos los valores por defecto:
 Después de pulsar el valor de **"Create key pair"**, automáticamente se decarga el archivo **ppk** en nuestro ordenador
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6eb18812-7990-4235-a2bf-8c6e940e9d92)
+
+Una vez que hemos creado el archivo **ppk** lo cargamos para configurar la opción de seguridad de nuestro AWS EMR cluster
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/3dacbb4d-a0c8-4e67-b167-32a57a4b723b)
 
 ### 8.13. IAM (Identity and Access Management)
 
