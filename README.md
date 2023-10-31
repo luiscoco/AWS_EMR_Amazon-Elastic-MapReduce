@@ -315,6 +315,19 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d95ff2c6-316e-44e5-ab00-82c9051b8225)
 
+### 8.15. Editamos el Security Group del Master
+
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d7a5953a-4df6-4ec0-9539-6f6d7bde4eca)
 
+Pulsamos en el botón "Edit Inbound Rules" 
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ecc96903-cc6e-4620-b99c-8942e9e8824c)
+
+Añadimos una regla más para el protocolo SSH puerto 22 desde mi IP
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/82726647-979f-4daf-af86-8a1ec49b1114)
+
+O acceso mediante protocolo SSH puerto 22 desde cualquier IP
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/dfcaf925-3b7e-4004-91ea-9bb993ac75fa)
 
