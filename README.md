@@ -339,5 +339,17 @@ O conexión mediante Mac o Linux
 
 ## 8. Amazon EMR - Configuring Putty
 
+Primero seleccionamos la opción **Session** e introducimos el nombre del servidor "hadoop@ec2-52-47-194-255.eu-west-3.compute.amazonaws.com" el protocolo de conexión SSH y el puerto 22
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/aed221ad-f031-4009-a66b-9e1068f3c539)
+
+Posteriormente elegimos la opción **SSH->Auth->Credentials** y subimos el archivo **ppk** que generamos cuando creamos el Key-Pair en AWS.
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/8ae93a5d-079b-47fa-a41b-4aad9e2f90e7)
+
+Damos un nombre a la Session y pulsamos el botón **Save** para guardar los datos de la Session
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/39981c6f-c709-4739-9940-c14d3bca09c4)
+
+Como último paso 
 
