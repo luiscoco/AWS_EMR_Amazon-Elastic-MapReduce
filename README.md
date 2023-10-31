@@ -143,29 +143,25 @@ These tools collectively form a powerful ecosystem for big data processing, anal
 
 They enable various tasks such as data storage, processing, monitoring, and analysis in large-scale distributed systems.
 
-## 7. Amazon EMR - Configuring Putty
+## 7. ¿Cómo crear un nuevo cluster AWS EMR?
 
-VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
-
-## 8. ¿Cómo crear un nuevo cluster AWS EMR?
-
-### 8.1. Primero asignamos un nombre al AWS EMR Cluster
+### 7.1. Primero asignamos un nombre al AWS EMR Cluster
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/f51d1fa0-4e1c-445d-a1d0-909acbe00a1e)
 
-### 8.2. Posteriormente elegimos una version del servicio AWS EMR
+### 7.2. Posteriormente elegimos una version del servicio AWS EMR
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6dc07758-46b0-47e0-9448-3ad907670d67)
 
-### 8.3. A continuación elegimos las aplicaciones de BigData que vamos a instalar en el cluster:
+### 7.3. A continuación elegimos las aplicaciones de BigData que vamos a instalar en el cluster:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d0ab1396-0bc3-41f3-9d36-e122bc1b5724)
 
-### 8.4. Respecto al sistema operativo elegimos Linux:
+### 7.4. Respecto al sistema operativo elegimos Linux:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/55b6a195-2e05-4ba7-9af9-6904fe582700)
 
-### 8.5. Elegimos la opción "Grupos de instancias".
+### 7.5. Elegimos la opción "Grupos de instancias".
 
 **Un tipo de instancia por grupo de nodos**
 
@@ -175,11 +171,11 @@ VERY IMPORTANT! youtube video: https://www.youtube.com/watch?v=JzENuQhelUM
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/984bb374-7620-4b37-a59a-2d3c586911b6)
 
-### 8.6. Respecto al escalado del cluster, elegimos escalado del cluster manual:
+### 7.6. Respecto al escalado del cluster, elegimos escalado del cluster manual:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/cf882afe-6f36-4dc9-8c34-d6ee8f4b8449)
 
-### 8.7. For your subnet to communicate with external sources
+### 7.7. For your subnet to communicate with external sources
 
 As previous stFor your subnet to communicate with external sources:
 
@@ -225,7 +221,7 @@ Target: The NAT Gateway you just created.
 
 After making these changes, your subnet should have a route to external sources,
 
-### 8.8. VPC y Subnet
+### 7.8. VPC y Subnet
 
 Elegimos la VPC por defecto creada en nuestra cuenta de AWS. Respecto a la subnet, elegimos una de las tres subnets que integran la default VPC de nuestra cuenta.
 
@@ -237,25 +233,25 @@ Podemos consultar las VPC y las subnets disponibles
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/80f4910b-ee72-4e39-96c1-2f984bb5d039)
 
-### 8.9. Elegimos el tipo de Terminación del AWS EMR
+### 7.9. Elegimos el tipo de Terminación del AWS EMR
 
 En nuestro caso elegimos el tipo de terminación del cluster "Manual"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/96de6987-6e98-4c91-9a70-0f7fa7ca130a)
 
-### 8.10. Elegimos las "Bootstrap actions" y el "Cluster Logs"
+### 7.10. Elegimos las "Bootstrap actions" y el "Cluster Logs"
 
 Dejamos los valores por defecto:
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/42c0214f-a8c2-4eac-9721-bc521cd2b4f1)
 
-### 8.11. "Tags" y "Edit software settings"
+### 7.11. "Tags" y "Edit software settings"
 
 Dejamos los valores por defecto: 
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/e0e57bd8-8dba-4ccd-a317-f02e785f3e96)
 
-### 8.12. Security configuration and EC2 key pair 
+### 7.12. Security configuration and EC2 key pair 
 
 Como paso previo tenemos que crear un Key-Pair y descargar su archivo en nuestro ordenador personal.
 
@@ -271,11 +267,11 @@ Una vez que hemos creado el archivo **ppk** lo cargamos para configurar la opci�
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/3dacbb4d-a0c8-4e67-b167-32a57a4b723b)
 
-### 8.13. IAM (Identity and Access Management)
+### 7.13. IAM (Identity and Access Management)
 
 Tenemos que crear el "Service Role" y el "Instance Profile" para las instancias EC2 de nuestro cluster.
 
-#### 8.13.1. Primero: creamos el "Service Role"
+#### 7.13.1. Primero: creamos el "Service Role"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ecbaeaeb-5c94-451d-a412-5a01a9e0abda)
 
@@ -291,7 +287,7 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c674c8b2-2c1e-4ebc-955d-45c2d5618c26)
 
-#### 8.13.2. Segundo: cremos el "Instance Profile"
+#### 7.13.2. Segundo: cremos el "Instance Profile"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/10c81cff-cccf-467d-8cec-57ba962d3c1b)
 
@@ -305,17 +301,17 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/53fcc013-00e4-4b17-ac24-0823a86dd44c)
 
-#### 8.13.3. Identity and Access Management (IAM) roles 
+#### 7.13.3. Identity and Access Management (IAM) roles 
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/64a3b6b9-0a97-4381-b072-89ac16637065)
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c2a39772-04f8-4a41-8da5-6c9de3990a79)
 
-### 8.14. Pulsamos el botón "Create cluster"
+### 7.14. Pulsamos el botón "Create cluster"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d95ff2c6-316e-44e5-ab00-82c9051b8225)
 
-### 8.15. Editamos el Security Group del Master
+### 7.15. Editamos el Security Group del Master
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d7a5953a-4df6-4ec0-9539-6f6d7bde4eca)
 
@@ -330,4 +326,18 @@ Añadimos una regla más para el protocolo SSH puerto 22 desde mi IP y pulsamos 
 O acceso mediante protocolo SSH puerto 22 desde cualquier IP y pulsamos el botón "Save Rules"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/dfcaf925-3b7e-4004-91ea-9bb993ac75fa)
+
+### 7.16. Conectar al "Primary node" usando SSH
+
+Tenemos dos opciones conexión en Windows
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/8fad7a5a-2906-4d61-a84d-5496a719ba9c)
+
+O conexión mediante Mac o Linux
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/27fa7995-9832-404c-96c6-9ebc2d5e9109)
+
+## 8. Amazon EMR - Configuring Putty
+
+
 
