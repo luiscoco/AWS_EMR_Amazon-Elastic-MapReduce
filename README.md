@@ -239,10 +239,23 @@ Podemos consultar las VPC y las subnets disponibles
 
 ### 8.9. IAM (Identity and Access Management)
 
-Tenemos que crear el "service role" y el "instance profile" para las instancias EC2 de nuestro cluster.
+Tenemos que crear el "Service Role" y el "Instance Profile" para las instancias EC2 de nuestro cluster.
 
 #### 8.9.1. Primero: creamos el "Service Role"
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/b4edb5b5-d981-4463-8444-2d92ae6672ef)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/76869987-7a38-41ba-aa49-ddffce7bc38f)
+
+Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón crear:
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/97f9c876-c952-4a61-b44f-f6178783f810)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/3f3201d6-3789-4518-b8c7-3a74cd92c984)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c674c8b2-2c1e-4ebc-955d-45c2d5618c26)
+
+#### 8.9.2. Segundo: cremos el "Instance Profile"
 
 #### 8.9.2. Segundo: creamos el "Instance Profile"
 
