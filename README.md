@@ -323,11 +323,11 @@ Pulsamos en el botón "Edit Inbound Rules"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ecc96903-cc6e-4620-b99c-8942e9e8824c)
 
-Añadimos una regla más para el protocolo SSH puerto 22 desde mi IP
+Añadimos una regla más para el protocolo SSH puerto 22 desde mi IP y pulsamos el botón "Save Rules"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/82726647-979f-4daf-af86-8a1ec49b1114)
 
-O acceso mediante protocolo SSH puerto 22 desde cualquier IP
+O acceso mediante protocolo SSH puerto 22 desde cualquier IP y pulsamos el botón "Save Rules"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/dfcaf925-3b7e-4004-91ea-9bb993ac75fa)
 
