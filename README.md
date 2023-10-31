@@ -239,6 +239,16 @@ Podemos consultar las VPC y las subnets disponibles
 
 ### 8.9. IAM (Identity and Access Management)
 
+Tenemos que crear el "service role" y el "instance profile" para las instancias EC2 de nuestro cluster.
+
+#### 8.9.1. Primero: creamos el "Service Role"
+
+
+#### 8.9.2. Segundo: creamos el "Instance Profile"
+
+
+
+
 EMR_DefaultRole
 
 EMR_EC2_DefaultRole->AmazonEMRFullAccessPolicy_v2
