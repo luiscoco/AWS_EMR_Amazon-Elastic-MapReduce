@@ -409,6 +409,20 @@ spark-shell
 
 ## 10. Create AWS EMR Cluster Using AWS CLI and Submit job
 
+Create an IAM user
+
+Configure and install AWS CLI
+
+Create an EMR cluster using AWS CLI
+
+Create Pyspark code or Job
+
+Submit job using AWS CLI 
+
+Submit job using Primary node
+
+Check output in s3 bucket
+
 **NOTA IMPORTANTE!** see the ZIP file in this Github repo with a real example
 
 Youtube video: https://www.youtube.com/watch?v=XsWnW7-8IGQ
