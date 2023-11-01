@@ -399,3 +399,8 @@ spark-shell
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ff22cdf4-b807-4da1-93d2-fcf74375c841)
 
+## 10. Create AWS EMR Cluster Using AWS CLI and Submit job
+
+VERY IMPORTANT see the ZIP file in this Github repo with a real example
+
+Youtube video: https://www.youtube.com/watch?v=XsWnW7-8IGQ
