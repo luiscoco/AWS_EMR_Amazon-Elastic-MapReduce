@@ -93,7 +93,7 @@ In jobs where many read operations are not performed, we can use EMRFS with S3 t
 
 In jobs with a lot of iterative reads (for example **Machine Learning**), we will benefit more from a system like **HDFS**.
 
-## 6. Aplicationes que se pueden incluir en AWS EMR 
+## 6. AWS EMR Big Data Applications 
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/16aa1cc5-4199-4401-a7ac-190b2dda86ed)
 
@@ -141,27 +141,29 @@ These tools collectively form a powerful ecosystem for big data processing, anal
 
 They enable various tasks such as data storage, processing, monitoring, and analysis in large-scale distributed systems.
 
-## 7. ¿Cómo crear un nuevo cluster AWS EMR?
+## 7. ¿How to create a new AWS EMR Cluster?
 
-### 7.1. Primero asignamos un nombre al AWS EMR Cluster
+### 7.1. First we set the AWS EMR Cluster name
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/f51d1fa0-4e1c-445d-a1d0-909acbe00a1e)
 
-### 7.2. Posteriormente elegimos una version del servicio AWS EMR
+### 7.2. We select the AWS EMR version
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6dc07758-46b0-47e0-9448-3ad907670d67)
 
-### 7.3. A continuación elegimos las aplicaciones de BigData que vamos a instalar en el cluster:
+### 7.3. We select the applications to be installed in the AWS EMR cluster
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d0ab1396-0bc3-41f3-9d36-e122bc1b5724)
 
-### 7.4. Respecto al sistema operativo elegimos Linux:
+### 7.4. We select the operating systems for the EC2 integrating the cluster
+
+We leave the default option, to install Linux as operating system
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/55b6a195-2e05-4ba7-9af9-6904fe582700)
 
-### 7.5. Elegimos la opción "Grupos de instancias".
+### 7.5. We select the EC2 instances types 
 
-**Un tipo de instancia por grupo de nodos**
+We select the option **One instance type per Nodes Group**
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/e24f5c04-a851-4211-8949-3fb026877d3c)
 
@@ -169,7 +171,9 @@ They enable various tasks such as data storage, processing, monitoring, and anal
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/984bb374-7620-4b37-a59a-2d3c586911b6)
 
-### 7.6. Respecto al escalado del cluster, elegimos escalado del cluster manual:
+### 7.6. Scaling the cluster
+
+We select the option Manual Scaling
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/cf882afe-6f36-4dc9-8c34-d6ee8f4b8449)
 
