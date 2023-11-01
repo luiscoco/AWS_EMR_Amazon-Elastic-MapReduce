@@ -361,8 +361,41 @@ Posteriormente ya nos aparece la siguiente pantalla. Vemos que hemos accedido co
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d71c93c0-7fc7-41e4-a5e5-dc2336fdae33)
 
+Podemos ejecutar el comando "sudo yum update" para actualizar a su última version los paquetes instalados. 
+
+```
+sudo yum update
+```
+
+This command is used on Linux systems, specifically those using the yum package manager. Let's break it down:
+
+**sudo:** This stands for "superuser do" and is used to execute commands with elevated privileges. It's often required for system-level operations.
+
+**yum:** This is the package manager used by Red Hat-based Linux distributions, such as Fedora and CentOS. It's used for installing, updating, and removing packages on the system.
+
+**update:** This is the specific command you're giving to yum. When you run sudo yum update, you're telling yum to update all installed packages to their latest versions. It checks the repositories configured on your system for newer versions of packages and installs them.
+
+So, in summary, sudo yum update is a command to update all the software packages on your system to the latest available versions.
+
+It's a good practice to run this command periodically to ensure that your system is up to date with the latest security patches and feature updates.
 
 ## 9. Probamos comandos Scala y Spark dentro de nuestro AWS EMR
 
+Primero consultamos cuál es la versión del comando "spark-submit" 
 
+Para ello ejecutamos el comando:
+
+```
+spark-submit --version
+```
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/4a53164a-252c-4135-a14e-3c74ce4690c8)
+
+Posteriormente podemos ejecutar el comando spark-shell.
+
+```
+spark-shell
+```
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ff22cdf4-b807-4da1-93d2-fcf74375c841)
 
