@@ -505,6 +505,12 @@ Now we can list the AWS EMR cluster running this command
 aws emr list-clusters
 ```
 
+Using the **ClusterId** to check status and information of the cluster
+
+```
+aws emr describe-cluster --cluster-id ClusterId
+```
+
 - Add steps to execute specific job or task by using AWS CLI
 
 - Check out
