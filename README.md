@@ -511,7 +511,40 @@ Using the **ClusterId** to check status and information of the cluster
 aws emr describe-cluster --cluster-id ClusterId
 ```
 
-- Add steps to execute specific job or task by using AWS CLI
+- Excute job by add step pass ClusterId and script name (spark code)
+
+This command is adding a **Spark job** as a step to an existing **EMR cluster**, specifying details such as the **ClusterId**, **Spark job configuration**, and the location of the **Spark script on S3**
+
+```
+aws emr add-steps
+--cluster-id ClusterId
+--steps Type=Spark,Name="MySparkJob",ActionOnFailure=CONTINUE,Args=[--deploy-mode,cluster,--master,yarn,--conf,spark.yarn.submit.waitAppCompletion=true,s3://myemrproject/scripts/mypysparkscript_1.py]
+```
+
+**aws emr add-steps**: This is the AWS CLI command to add steps to an EMR cluster. It allows you to submit Spark applications or other types of steps to be executed on the EMR cluster.
+
+**--cluster-id ClusterId**: This specifies the unique identifier of the EMR cluster (j-GAVB3ZN07CUB) to which you want to add the Spark job.
+
+**--steps Type=Spark,Name="MySparkJob",ActionOnFailure=CONTINUE,Args=[--deploy-mode,cluster,--master,yarn,--conf,spark.yarn.submit.waitAppCompletion=true,s3://myemrproject/scripts/mypysparkscript_1.py]**:
+This part defines the details of the Spark job you want to submit as a step to the EMR cluster.
+
+**Type=Spark**: Indicates that the step is a Spark application.
+
+**Name="MySparkJob"**: Specifies a name for the Spark job, in this case, "MySparkJob".
+
+**ActionOnFailure=CONTINUE**: Specifies the action to take if the step fails. In this case, it continues to the next step even if this one fails.
+
+**Args=[...]**: Specifies the arguments to pass to the Spark application. 
+
+Here's a breakdown of the arguments:
+
+**--deploy-mode,cluster**: Sets the deploy mode of the Spark application to "cluster," meaning it will run on the EMR cluster.
+
+**--master,yarn**: Specifies that **YARN** should be used as the cluster manager for Spark.
+
+**--conf,spark.yarn.submit.waitAppCompletion=true**: Configures Spark to wait for the application to complete before submitting the next step. This is useful for job chaining
+
+**s3://myemrproject/scripts/mypysparkscript_1.py**: Specifies the location of the Spark script (mypysparkscript_1.py) on Amazon S3. This is the script that will be executed as part of the Spark job
 
 - Check out
 
