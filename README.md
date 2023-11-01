@@ -457,6 +457,18 @@ These are the steps to follow in order to **create and run an AWS EMR cluster ur
 
 - Create an **AWS EMR cluster** (previously create the AIM roles: EMR_DefaultRole and EMR_EC2_DefaultRole)
 
+```
+aws emr create-cluster
+--name MyEMRCluster
+--use-default-roles
+--release-label emr-6.11.0
+--instance-count 1
+--instance-type m5.xlarge
+--applications Name=Spark Name=Hadoop
+--ec2-attributes SubnetIds=subnet-0169aa6190d4e691f,KeyName=EMR_luis_keypair
+--log-uri s3://aws-logs-550146943653-eu-west-3/elasticmapreduce
+```
+
 - Add steps to execute specific job or task by using AWS CLI
 
 - Check out
