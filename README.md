@@ -683,7 +683,7 @@ Replace "**YourEMRRole**" with the name of the IAM role you created
 
 This IAM role will have the necessary permissions to access the S3 bucket specified in your Spark job or EMR steps
 
-### 10.10. Terminate the AWS EMR Cluster
+### 10.12. Terminate the AWS EMR Cluster
 
 When finishing your job run this command to terminate your AWS EMR cluster:
 
@@ -691,7 +691,7 @@ When finishing your job run this command to terminate your AWS EMR cluster:
 aws emr terminate-clusters --cluster-id ClusterId
 ```
 
-### 10.11. What is the difference between "aws emr add-steps" and "spark-submit" commands
+### 10.13. What is the difference between "aws emr add-steps" and "spark-submit" commands
 
 **aws emr add-steps** is a command used to add a step to an Amazon EMR (Elastic MapReduce) cluster
 
