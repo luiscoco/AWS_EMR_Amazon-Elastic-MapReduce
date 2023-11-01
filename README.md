@@ -61,37 +61,37 @@ They are used to add processing capacity to the cluster.
 
 Among the deployment options that EMR has, we can choose to pay per use, based on time or save on costs by using reserved instances, savings plans or AWS spot instances.
 
-## 4. Escalado en Amazon EMR
+## 4. Scaling AWS EMR
 
-En función de las cargas de trabajo que queramos ejecutar, podemos desplegar **clusters específicos** para la duración de nuestro trabajo o bien tener un **clúster permanente** con alta disponibilidad y auto escalable en función de la demanda. 
+Depending on the workloads we want to run, we can deploy **specific clusters** for the duration of our work or have a **permanent cluster** with high availability and auto-scaling based on demand.
 
-El primer caso está aconsejado para trabajos puntuales y más ligeros.
+The first case is recommended for specific and lighter jobs.
 
-Los despliegues de EMR se pueden escalar de forma **automática** o de forma **manual** estableciendo límites de nodos core. 
+EMR deployments can be scaled **automatically** or **manually** by setting core node limits.
 
-Para escalar el clúster se usarán **métricas de utilización**, tomando en cuenta las réplicas de datos.
+To scale the cluster, **utilization metrics** will be used, taking data replicas into account.
 
-En el caso de trabajos de streaming con **Spark Streaming** deberemos analizar muy bien la capacidad del clúster para escalar con el volumen. 
+In the case of streaming jobs with **Spark Streaming** we must carefully analyze the cluster's ability to scale with the volume.
 
-Es posible que el clúster pueda añadir capacidad automáticamente pero cuando el volumen de trabajo vuelva a disminuir **no sea capaz de reducir el número de nodos**, aumentando los costes considerablemente.
+It is possible that the cluster can add capacity automatically but when the volume of work decreases again **it will not be able to reduce the number of nodes**, increasing costs considerably.
 
-## 5. Almacenamiento en Amazon EMR
+## 5. Storing in AWS EMR
 
-Debemos entender que EMR proporciona dos formas de almacenamiento:
+We must understand that EMR provides two forms of storage:
 
-**EMRFS**: Este sistema de ficheros se basa en el servicio **S3**. Tiene la capacidad de desacoplar el cómputo del clúster del almacenamiento.
+**EMRFS**: This file system is based on the **S3** service. It has the ability to decouple cluster computing from storage.
 
-**HDFS**: Necesita un **clúster dedicado**. Debemos configurar un factor de replicación para los nodos Core y tenerlo en cuenta para un correcto dimensionamiento.
+**HDFS**: Requires a **dedicated cluster**. We must configure a replication factor for the Core nodes and take it into account for correct sizing.
 
-**EMR** siempre necesita **HDFS**, por lo que al menos se necesitará un nodo de tipo Core.
+**EMR** always needs **HDFS**, so at least one Core type node will be needed.
 
-Ambos modos son compatibles, y podemos persistir nuestros datos en el almacenamiento que necesitemos. 
+Both modes are supported, and we can persist our data to whatever storage we need.
 
-También, podremos usar **s3DistCp** para copiarnos datos entre ellos.
+Also, we can use **s3DistCp** to copy data between them.
 
-En trabajos en los que no se realicen muchas operaciones de lectura, podremos usar EMRFS con S3 para optimizar los costes. 
+In jobs where many read operations are not performed, we can use EMRFS with S3 to optimize costs.
 
-En los trabajos con muchas lecturas iterativas (por ejemplo **Machine Learning**), nos beneficiaremos más de un sistema como **HDFS**.
+In jobs with a lot of iterative reads (for example **Machine Learning**), we will benefit more from a system like **HDFS**.
 
 ## 6. Aplicationes que se pueden incluir en AWS EMR 
 
