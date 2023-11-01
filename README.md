@@ -404,3 +404,49 @@ spark-shell
 VERY IMPORTANT see the ZIP file in this Github repo with a real example
 
 Youtube video: https://www.youtube.com/watch?v=XsWnW7-8IGQ
+
+These are the steps to follow in order to create and run an AWS EMR cluster uring AWS CLI:
+
+- Install and configure CLI
+
+- Create a Key-Pair in EC2
+
+- Create a S3 bucket "myemrproject" and inside several folders: "input", "logs", "scripts"
+
+  Upload to the "input" folder the input data "product_data.csv"
+
+  Upload to the "scripts" folder the application source code "mypysparkscript_1.py"
+
+- Create an AWS EMR cluster (previously create the AIM roles: EMR_DefaultRole and EMR_EC2_DefaultRole)
+
+- Add steps to execute specific job or task bu using AWS CLI
+
+- Check out
+
+- Submit Spark job or task directly to a Spark cluster(Primary node)
+
+This is the application source code:
+
+```python
+from pyspark.sql import SparkSession
+
+if __name__ == "__main__":
+    # Initialize SparkSession
+    spark = SparkSession.builder.appName("MyPySparkJob").getOrCreate()
+     
+    try:
+        # Your PySpark code here
+        # Specify the input file path
+        input_file = 's3://myemrproject/input/product_data.csv'
+        df = spark.read.csv(input_file)
+        df.show()
+        df.write.option("header", "true").mode("overwrite").parquet("s3://myemrproject/output")
+        
+        # Stop SparkSession
+        spark.stop()
+
+    except Exception as e:
+        # Handle any exceptions or errors
+        print("Error occurred: ", str(e))
+        spark.stop()
+```
