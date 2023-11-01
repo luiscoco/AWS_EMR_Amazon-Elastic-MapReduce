@@ -628,7 +628,7 @@ This assumes that your EMR cluster has the necessary **permissions** to access t
 
 If your script is in a different local directory, you can replace **s3://your-s3-bucket/path/to/scripts/** with the appropriate local path
 
-### 10.11. Create an IAM role for an EMR cluster with the necessary permissions to access an S3 bucket
+### 10.10. Create an IAM role for an EMR cluster with the necessary permissions to access an S3 bucket
 
 To create an IAM role for an EMR cluster with the necessary permissions to access an S3 bucket, you can follow these general steps:
 
@@ -683,7 +683,7 @@ Replace "**YourEMRRole**" with the name of the IAM role you created
 
 This IAM role will have the necessary permissions to access the S3 bucket specified in your Spark job or EMR steps
 
-### 10.12. Terminate the AWS EMR Cluster
+### 10.11. Terminate the AWS EMR Cluster
 
 When finishing your job run this command to terminate your AWS EMR cluster:
 
@@ -691,7 +691,7 @@ When finishing your job run this command to terminate your AWS EMR cluster:
 aws emr terminate-clusters --cluster-id ClusterId
 ```
 
-### 10.13. What is the difference between "aws emr add-steps" and "spark-submit" commands
+### 10.12. What is the difference between "aws emr add-steps" and "spark-submit" commands
 
 **aws emr add-steps** is a command used to add a step to an Amazon EMR (Elastic MapReduce) cluster
 
