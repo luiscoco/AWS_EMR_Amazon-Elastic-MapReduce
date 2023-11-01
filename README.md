@@ -423,9 +423,25 @@ These are the steps to follow in order to **create and run an AWS EMR cluster ur
 
   And Region : eu-west-3
 
+  After configuring AWS CLI you can test it running the commands:
+
+  List all IAM user 
+
+  ```
+  aws iam list-users
+  ```
+  
+  List all buckets in s3
+
+  ```
+  aws s3 ls
+  ```
+ 
 - Create a **Key-Pair** in AWS EC2. See section 7.2.
 
 - Create a AWS **S3 bucket** "myemrproject" and inside several folders: "input", "logs", "scripts"
+
+  ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/3762f007-8403-4b88-a3fb-3da021db134f)
 
   Upload to the "input" folder the input data "product_data.csv"
 
