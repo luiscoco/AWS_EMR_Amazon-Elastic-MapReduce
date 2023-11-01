@@ -43,25 +43,23 @@ The system is also integrated with other AWS services and provides us with **not
 
 **Jupyter Lab** can be used using **Apache Livy**
 
-## 3. Arquitectura de EMR
+## 3. AWS EMR Architecture
 
-**EMR** tiene tres tipos de nodos:
+**Master**: Master nodes must be up and running to service the cluster.
 
-**Master**: Los nodos Master deben estar en funcionamiento para dar servicio al clúster.
+Several can be deployed to have high availability.
 
-Se pueden desplegar varios para tener alta disponibilidad. 
+By default, they host services like Hive Metastore.
 
-Por defecto, alojan servicios como Hive Metastore.
+**Core**: These nodes are responsible for storing data in HDFS and executing jobs, they can also be scaled.
 
-**Core**: Estos nodos se encargan de almacenar los datos en HDFS y ejecutar los trabajos, también se pueden escalar.
+**Task**: These nodes do not store data so they can be added and deleted without risk of data loss.
 
-**Task**: Estos nodos no almacenan datos por lo que se pueden añadir y eliminar sin riesgos de pérdida de datos. 
-
-Se usan par añadir capacidad de procesamiento al clúster.
+They are used to add processing capacity to the cluster.
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ec875d11-635f-4d4f-a0ef-a25d31626cb7)
 
-Entre las opciones de despliegue que tiene EMR podemos elegir pago por uso, en función del tiempo o ahorrar en costes usando instancias reservadas, planes de ahorro o instancias spot de AWS.
+Among the deployment options that EMR has, we can choose to pay per use, based on time or save on costs by using reserved instances, savings plans or AWS spot instances.
 
 ## 4. Escalado en Amazon EMR
 
