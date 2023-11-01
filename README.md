@@ -355,17 +355,17 @@ We set the Session name and press the **Save** button
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/39981c6f-c709-4739-9940-c14d3bca09c4)
 
-Como último paso pulsamos el botón **open** para conectarnos con el Primary Node del AWS EMR cluster
+Finally we press the **open** button to connect to the AWS EMR Primary Node
 
-La primera vez que nos conectamos nos aparece este mensaje. Pulsamos en el botón **Aceptar**
+The first time we connect appears the following message. Press the **Accept** button
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/64ee5d09-c9ef-48f9-861d-d045878606f4)
 
-Posteriormente ya nos aparece la siguiente pantalla. Vemos que hemos accedido con el usuario **hadoop** y con la autenticación mediante el **Key-Pair**
+After that the following console screen is shown (Master node console). We confirm we accessed with the  **hadoop** user and we authenticated with the **Key-Pair**
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d71c93c0-7fc7-41e4-a5e5-dc2336fdae33)
 
-Podemos ejecutar el comando "sudo yum update" para actualizar a su última version los paquetes instalados. 
+Then we can execute the **sudo yum update** command to update the installed packages in the Linux console 
 
 ```
 sudo yum update
