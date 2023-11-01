@@ -23,25 +23,25 @@ https://www.youtube.com/watch?v=radrkdkUI0U
 AWS EMR videos by Dr. Sian Lun:
 https://www.youtube.com/@sianlun/videos
 
-## 2. ¿Qué es AWS EMR?
+## 2. ¿What is AWS EMR?
 
 https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html
 
-**EMR** es una plataforma gestionada en AWS que nos permite ejecutar trabajos **Big Data** con el ecosistema **Hadoop** como motor de procesamiento distribuido. 
+**AWS EMR** is a platform managed on AWS that allows us to execute **Big Data** jobs with the **Hadoop** ecosystem as a **distributed processing engine**
 
-Usa instancias de Amazon Elastic Compute Cloud (Amazon **EC2**) para ejecutar los clusters con los servicios open source que necesitemos, como por ejemplo Apache **Spark** o Apache **Hive**.
+Use Amazon Elastic Compute Cloud (Amazon **EC2**) instances to run the clusters with the open source services that we need, such as **Apache Spark** or **Apache Hive**
 
-EMR tiene **HDFS** como capa de almacenamiento para el clúster. 
+**EMR** has **HDFS** as the storage layer for the cluster
 
-También, nos permite desacoplar el cómputo del almacenamiento usando el servicio **S3** para almacenar datos y logs sin límite.
+Also, it allows us to decouple computing from storage using the **S3** service to store data and logs without limit
 
-Se puede elegir entre varias versiones que determinan el stack open source que se despliega en el clúster. 
+You can choose between several versions that determine the open source stack that is deployed in the cluster
 
-Incluye **Hadoop**, **Hive**, **Tez**, **Flink**, **Hue**, **Spark**, **Oozie**, **Pig** y **HBase** entre otros.
+Includes Hadoop, Hive, Tez, Flink, Hue, Spark, Oozie, Pig and HBase among others
 
-El sistema también está integrado con otros servicios de AWS y nos proporciona notebooks para ejecutar código en el clúster. 
+The system is also integrated with other AWS services and provides us with **notebooks** to run code on the cluster
 
-Se puede usar **Jupyter Lab** usando **Apache Livy**.
+**Jupyter Lab** can be used using **Apache Livy**
 
 ## 3. Arquitectura de EMR
 
