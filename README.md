@@ -327,31 +327,31 @@ Add another rule in the **SSH** protocol and **port 22** to access from **My IP*
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/82726647-979f-4daf-af86-8a1ec49b1114)
 
-O acceso mediante protocolo SSH puerto 22 desde cualquier IP y pulsamos el botón "Save Rules"
+Or access with **SSH** protocol and **port 22** from **every IP address** and the press the **Save Rules** button
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/dfcaf925-3b7e-4004-91ea-9bb993ac75fa)
 
-### 7.16. Conectar al "Primary node" usando SSH
+### 7.16. Connect to the "Primary node" using SSH
 
 Tenemos dos opciones conexión en Windows
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/8fad7a5a-2906-4d61-a84d-5496a719ba9c)
 
-O conexión mediante Mac o Linux
+Or connect with Mac or Linux
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/27fa7995-9832-404c-96c6-9ebc2d5e9109)
 
 ## 8. AWS EMR - Configuración de Putty para conexión con el Nodo Primario en Windows
 
-Primero seleccionamos la opción **Session** e introducimos el nombre del servidor "hadoop@ec2-52-47-194-255.eu-west-3.compute.amazonaws.com" el protocolo de conexión SSH y el puerto 22
+First we select the **Session** and we set the Host name "hadoop@ec2-52-47-194-255.eu-west-3.compute.amazonaws.com", the protocol SSH and the port 22
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ef8cfc82-7372-40cf-a6f9-b4b385c058c9)
 
-Posteriormente elegimos la opción **SSH->Auth->Credentials** y subimos el archivo **ppk** que generamos cuando creamos el Key-Pair en AWS.
+We select the menu option **SSH->Auth->Credentials** and we upload the **ppk** file, previously generated when creating the Key-Pair in EC2 AWS
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/8ae93a5d-079b-47fa-a41b-4aad9e2f90e7)
 
-Damos un nombre a la Session y pulsamos el botón **Save** para guardar los datos de la Session
+We set the Session name and press the **Save** button
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/39981c6f-c709-4739-9940-c14d3bca09c4)
 
@@ -373,21 +373,25 @@ sudo yum update
 
 This command is used on Linux systems, specifically those using the yum package manager. Let's break it down:
 
-**sudo:** This stands for "superuser do" and is used to execute commands with elevated privileges. It's often required for system-level operations.
+**sudo:** This stands for "superuser do" and is used to execute commands with elevated privileges. 
 
-**yum:** This is the package manager used by Red Hat-based Linux distributions, such as Fedora and CentOS. It's used for installing, updating, and removing packages on the system.
+It's often required for system-level operations.
 
-**update:** This is the specific command you're giving to yum. When you run sudo yum update, you're telling yum to update all installed packages to their latest versions. It checks the repositories configured on your system for newer versions of packages and installs them.
+**yum:** This is the package manager used by Red Hat-based Linux distributions, such as Fedora and CentOS. 
+
+It's used for installing, updating, and removing packages on the system.
+
+**update:** This is the specific command you're giving to yum. When you run sudo yum update, you're telling yum to update all installed packages to their latest versions. 
+
+It checks the repositories configured on your system for newer versions of packages and installs them.
 
 So, in summary, sudo yum update is a command to update all the software packages on your system to the latest available versions.
 
 It's a good practice to run this command periodically to ensure that your system is up to date with the latest security patches and feature updates.
 
-## 9. Probamos comandos Scala y Spark dentro de nuestro AWS EMR
+## 9. Run the Scala and Spark commands in AWS EMR cluster
 
-Primero consultamos cuál es la versión del comando "spark-submit" 
-
-Para ello ejecutamos el comando:
+First we see the "spark-submit" command version 
 
 ```
 spark-submit --version
@@ -395,7 +399,7 @@ spark-submit --version
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/4a53164a-252c-4135-a14e-3c74ce4690c8)
 
-Posteriormente podemos ejecutar el comando spark-shell.
+Then we run the command "spark-shell" command
 
 ```
 spark-shell
