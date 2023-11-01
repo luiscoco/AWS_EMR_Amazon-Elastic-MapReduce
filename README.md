@@ -419,6 +419,10 @@ These are the steps to follow in order to **create and run an AWS EMR cluster ur
 
 - Create  **Access Key ID and Access Key** for using later during AWS CLI configuration.
 
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6d6a55e0-3c97-47c2-8e27-cf205e6340fd)
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/75c00635-a3a1-4a29-9271-018e8aea689c)
+
 - Install and configure **AWS CLI**
 
   Type the command:
