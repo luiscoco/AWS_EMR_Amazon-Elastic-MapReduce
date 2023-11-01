@@ -444,7 +444,15 @@ These are the steps to follow in order to **create and run an AWS EMR cluster ur
   ```
   aws s3 ls
   ```
- 
+
+- To see the AWS CLI version, we run the command
+
+```
+aws --version
+```
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/59578537-de62-4ddf-993f-6fc2ddbd90aa)
+
 - Create a **Key-Pair** in AWS EC2. See section 7.2.
 
 - Create a AWS **S3 bucket** "myemrproject" and inside several folders: "input", "logs", "scripts"
