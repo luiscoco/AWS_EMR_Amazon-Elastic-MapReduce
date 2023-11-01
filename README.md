@@ -477,6 +477,28 @@ aws --version
 aws emr create-cluster --name MyEMRCluster --use-default-roles --release-label emr-6.11.0 --instance-count 1 --instance-type m5.xlarge --applications Name=Spark Name=Hadoop --ec2-attributes SubnetIds=subnet-0169aa6190d4e691f,KeyName=EMR_luis_keypair --log-uri s3://aws-logs-550146943653-eu-west-3/elasticmapreduce
 ```
 
+This is a command-line interface (CLI) command for AWS Elastic MapReduce (EMR) to create a new EMR cluster. 
+
+This command essentially creates an EMR cluster named "MyEMRCluster" with one m5.xlarge instance, running **Spark** and **Hadoop** applications, using default roles, and storing logs in the specified S3 bucket.
+
+**aws emr create-cluster**: This is the main command to create an EMR cluster using the AWS CLI.
+
+**--name MyEMRCluster**: This sets the name of the EMR cluster to "MyEMRCluster."
+
+**--use-default-roles**: This option specifies that the command should use the default roles for EMR, which are necessary for managing and running EMR clusters.
+
+**--release-label emr-6.11.0**: Specifies the EMR release version to use. In this case, it's version 6.11.0.
+
+**--instance-count 1**: Sets the number of EC2 instances in the cluster to 1.
+
+**--instance-type m5.xlarge**: Specifies the type of EC2 instances to use in the cluster. In this case, it's m5.xlarge.
+
+**--applications Name=Spark Name=Hadoop**: Specifies the applications to be installed on the EMR cluster. In this case, it's Apache Spark and Apache Hadoop.
+
+**--ec2-attributes SubnetIds=subnet-0169aa6190d4e691f,KeyName=EMR_luis_keypair**: Specifies EC2 instance attributes. It specifies the subnet ID where the instances should be launched and the key pair to use for SSH access.
+
+**--log-uri s3://aws-logs-550146943653-eu-west-3/elasticmapreduce**: Specifies the Amazon S3 URI where the EMR logs should be stored. EMR logs contain information about the cluster's execution.
+
 - Add steps to execute specific job or task by using AWS CLI
 
 - Check out
