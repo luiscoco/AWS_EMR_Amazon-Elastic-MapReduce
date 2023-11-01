@@ -609,3 +609,38 @@ When finishing your job run this command to terminate your AWS EMR cluster:
 ```
 aws emr terminate-clusters --cluster-id ClusterId
 ```
+
+### 10.11. What is the difference between "aws emr add-steps" and "spark-submit" commands
+
+**aws emr add-steps** is a command used to add a step to an Amazon EMR (Elastic MapReduce) cluster. 
+
+It's a higher-level command provided by AWS to interact with their EMR service. 
+
+The example you've given is using this command to add a Spark step to an EMR cluster. 
+
+The step configuration includes details like the script location, Spark configuration, and other parameters.
+
+
+**spark-submit** is a Spark-specific command used to submit a Spark application to a cluster. 
+
+In summary, the **aws emr add-steps** command is more focused on interacting with EMR clusters and adding steps to them, while **spark-submit** is specifically for submitting Spark applications to a cluster.
+
+The **aws emr add-steps** command might involve additional AWS-specific configurations and could be part of a larger EMR workflow.
+
+#### May I use "spark-submit" without previously using "aws emr add-steps"?
+
+Absolutely! **spark-submit** is a standalone command and doesn't require the use of aws emr add-steps before using it. 
+
+You can submit Spark applications directly using **spark-submit** without adding steps to an EMR cluster using the AWS EMR API.
+
+Here's a breakdown:
+
+Use **aws emr add-steps** when you want to programmatically add steps (like Spark jobs) to an existing EMR cluster through the AWS EMR API. 
+
+This is useful when you want to automate job submissions as part of a larger workflow.
+
+Use spark-submit when you just want to submit a Spark application to a cluster manually. This is a more direct way of submitting Spark jobs and is often used for testing and interactive development.
+
+So, you can choose the approach that best fits your use case. 
+
+If you're automating job submissions to an EMR cluster, **aws emr add-steps** might be more suitable. If you just want to run a Spark job on an EMR cluster manually, you can use **spark-submit** directly.
