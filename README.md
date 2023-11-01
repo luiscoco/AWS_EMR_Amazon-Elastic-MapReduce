@@ -223,33 +223,35 @@ Target: The NAT Gateway you just created.
 
 After making these changes, your subnet should have a route to external sources,
 
-### 7.8. VPC y Subnet
+### 7.8. VPC and Subnet
 
-Elegimos la VPC por defecto creada en nuestra cuenta de AWS. Respecto a la subnet, elegimos una de las tres subnets que integran la default VPC de nuestra cuenta.
+We select the Default VPC in our AWS account. 
+
+Regarding the Subnet, we select one of the subnets in the Default VPC.
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6b278626-f4b0-4637-9b69-b1b225a88971)
 
-Podemos consultar las VPC y las subnets disponibles
+You can see the available VPC and Subnets
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/5c189763-7de2-4ff0-a78a-610522497ed1)
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/80f4910b-ee72-4e39-96c1-2f984bb5d039)
 
-### 7.9. Elegimos el tipo de Terminación del AWS EMR
+### 7.9. AWS EMR Termination
 
-En nuestro caso elegimos el tipo de terminación del cluster "Manual"
+We select Manual Termination
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/96de6987-6e98-4c91-9a70-0f7fa7ca130a)
 
-### 7.10. Elegimos las "Bootstrap actions" y el "Cluster Logs"
+### 7.10. "Bootstrap actions" and "Cluster Logs"
 
-Dejamos los valores por defecto:
+We leave the default values
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/42c0214f-a8c2-4eac-9721-bc521cd2b4f1)
 
 ### 7.11. "Tags" y "Edit software settings"
 
-Dejamos los valores por defecto: 
+We leave the default values
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/e0e57bd8-8dba-4ccd-a317-f02e785f3e96)
 
