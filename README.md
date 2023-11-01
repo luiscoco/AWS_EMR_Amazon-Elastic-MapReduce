@@ -554,7 +554,7 @@ Here's a breakdown of the arguments:
 
 **s3://myemrproject/scripts/mypysparkscript_1.py**: Specifies the location of the Spark script (mypysparkscript_1.py) on Amazon S3. This is the script that will be executed as part of the Spark job
 
-## 10.9. Submit Spark job to a Spark cluster(Primary node)
+### 10.9. Submit Spark job to a Spark cluster(Primary node)
 
 Submit Spark job or task directly to a Spark cluster(Primary node)
 
