@@ -415,15 +415,17 @@ Youtube video: https://www.youtube.com/watch?v=XsWnW7-8IGQ
 
 These are the steps to follow in order to **create and run an AWS EMR cluster uring AWS CLI**:
 
-- In AWS create **IAM user**
+### 10.1 Create new IAM user
 
-- Create  **Access Key ID and Access Key** for using later during AWS CLI configuration.
+### 10.2. Create Access Key ID and Access Key
+
+We create an Access Key ID and Access Key for using later during AWS CLI configuration.
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6d6a55e0-3c97-47c2-8e27-cf205e6340fd)
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/75c00635-a3a1-4a29-9271-018e8aea689c)
 
-- Install and configure **AWS CLI**
+### 10.3. Install and configure **AWS CLI**
 
   Type the command:
 
@@ -461,9 +463,11 @@ aws --version
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/59578537-de62-4ddf-993f-6fc2ddbd90aa)
 
-- Create a **Key-Pair** in AWS EC2. See section 7.2.
+### 10.4. Create a **Key-Pair** in AWS EC2 (See section 7.2)
 
-- Create a AWS **S3 bucket** "myemrproject" and inside several folders: "input", "logs", "scripts"
+### 10.5. Create a S3 bucket
+
+Create a AWS S3 bucket "myemrproject" and inside several folders: "input", "logs", "scripts"
 
   ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/3762f007-8403-4b88-a3fb-3da021db134f)
 
@@ -471,7 +475,9 @@ aws --version
 
   Upload to the "scripts" folder the application source code "mypysparkscript_1.py"
 
-- Create an **AWS EMR cluster** (previously create the AIM roles: EMR_DefaultRole and EMR_EC2_DefaultRole)
+### 10.6. Create AWS EMR cluster
+
+Create an **AWS EMR cluster** (previously create the AIM roles: EMR_DefaultRole and EMR_EC2_DefaultRole)
 
 ```
 aws emr create-cluster --name MyEMRCluster --use-default-roles --release-label emr-6.11.0 --instance-count 1 --instance-type m5.xlarge --applications Name=Spark Name=Hadoop --ec2-attributes SubnetIds=subnet-0169aa6190d4e691f,KeyName=EMR_luis_keypair --log-uri s3://aws-logs-550146943653-eu-west-3/elasticmapreduce
@@ -499,6 +505,8 @@ This command essentially creates an EMR cluster named "MyEMRCluster" with one m5
 
 **--log-uri s3://aws-logs-550146943653-eu-west-3/elasticmapreduce**: Specifies the Amazon S3 URI where the EMR logs should be stored. EMR logs contain information about the cluster's execution.
 
+### 10.7. List and describe the AWS EMR clusters
+
 Now we can list the AWS EMR cluster running this command
 
 ```
@@ -511,7 +519,7 @@ Using the **ClusterId** to check status and information of the cluster
 aws emr describe-cluster --cluster-id ClusterId
 ```
 
-- Excute job by add step pass ClusterId and script name (spark code)
+### 10.8 Excute job
 
 This command is adding a **Spark job** as a step to an existing **EMR cluster**, specifying details such as the **ClusterId**, **Spark job configuration**, and the location of the **Spark script on S3**
 
@@ -546,11 +554,19 @@ Here's a breakdown of the arguments:
 
 **s3://myemrproject/scripts/mypysparkscript_1.py**: Specifies the location of the Spark script (mypysparkscript_1.py) on Amazon S3. This is the script that will be executed as part of the Spark job
 
-- Check out
+## 10.9. Submit Spark job to a Spark cluster(Primary node)
 
-- Submit Spark job or task directly to a Spark cluster(Primary node)
+Submit Spark job or task directly to a Spark cluster(Primary node)
 
-This is the application source code:
+**spark-submit** is a command-line tool provided by Apache Spark to submit Spark applications or jobs directly to a Spark cluster
+
+To submit a job we run this command:
+
+```
+spark-submit --master yarn ./mypysparkscript_1.py
+```
+
+This is the application source code **mypysparkscript_1.py**:
 
 ```python
 from pyspark.sql import SparkSession
@@ -574,4 +590,12 @@ if __name__ == "__main__":
         # Handle any exceptions or errors
         print("Error occurred: ", str(e))
         spark.stop()
+```
+
+### 10.10. Terminate the AWS EMR Cluster
+
+When finishing your job run this command to terminate your AWS EMR cluster:
+
+````
+aws emr terminate-clusters --cluster-id ClusterId
 ```
