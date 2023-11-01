@@ -566,6 +566,16 @@ To submit a job we run this command:
 spark-submit --master yarn ./mypysparkscript_1.py
 ```
 
+This command is using **spark-submit**, a tool provided by Apache Spark for submitting Spark applications
+
+**spark-submit**: This is the command to submit a Spark application
+
+**--master yarn**: This option specifies the cluster manager to use. In this case, it's set to YARN, which is one of the cluster managers supported by Apache Spark. YARN (Yet Another Resource Negotiator) is often used in Hadoop clusters to manage resources and schedule tasks
+
+**./mypysparkscript_1.py**: This is the path to the Python script (mypysparkscript_1.py) that you want to submit as a Spark application. 
+
+The ./ indicates that the script is in the current directory
+
 This is the application source code **mypysparkscript_1.py**:
 
 ```python
