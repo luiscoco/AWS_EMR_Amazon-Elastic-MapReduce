@@ -602,6 +602,87 @@ if __name__ == "__main__":
         spark.stop()
 ```
 
+**VERY IMPORTANT NOTE:** 
+
+How to copy the script file "mypysparkscript_1.py" to the AWS EMR Master node when I want to execute this command
+
+spark-submit --master yarn ./mypysparkscript_1.py
+
+You can use the aws emr **cp** command to copy your script file to the master node of your EMR cluster before running spark-submit
+
+```
+aws emr cp mypysparkscript_1.py s3://your-s3-bucket/path/to/scripts/
+```
+
+Replace **your-s3-bucket** with the name of your **S3** bucket and adjust the path as needed. 
+
+This command will upload your script to the specified S3 location.
+
+After uploading, you can use spark-submit with the script file on the master node:
+
+```
+spark-submit --master yarn s3://your-s3-bucket/path/to/scripts/mypysparkscript_1.py
+```
+
+This assumes that your EMR cluster has the necessary **permissions** to access the S3 bucket. 
+
+If your script is in a different local directory, you can replace **s3://your-s3-bucket/path/to/scripts/** with the appropriate local path
+
+### 10.11. Create an IAM role for an EMR cluster with the necessary permissions to access an S3 bucket
+
+To create an IAM role for an EMR cluster with the necessary permissions to access an S3 bucket, you can follow these general steps:
+
+- Sign in to the **AWS Management Console**:
+
+- Log in to your AWS account and navigate to the IAM Console
+
+- Create a new IAM Role:
+
+- In the IAM Console, click on "**Roles**" in the left navigation pane
+
+- Click the "**Create role**" button
+
+-  Choose a use case:
+
+- Select "**AWS service**" as the type of trusted entity
+
+- Choose "**EMR**" from the list of use cases
+
+**Attach permissions policies**:
+
+In the permissions policies step, attach policies that grant the necessary permissions
+
+At a minimum, you should attach the **AmazonS3FullAccess** policy to allow full access to S3
+
+You can create a custom policy with the specific permissions required if you want more fine-grained control
+
+Give your role a meaningful name and description
+
+Click "**Create role**" to finish the process
+
+Note the **Role ARN**:
+
+After creating the role, note the Role ARN as you will use this when launching your EMR cluster
+
+**Launch EMR Cluster with IAM Role**:
+
+When creating your EMR cluster, either through the AWS Management Console or using the AWS CLI, specify the IAM role you created in the "Edit software settings" section
+
+Here's an example CLI command to create a cluster with a specified IAM role:
+
+```
+aws emr create-cluster --name "MyEMRCluster" --release-label emr-6.4.0 \
+--applications Name=Spark Name=Hadoop \
+--ec2-attributes KeyName=my-key-pair \
+--instance-type m5.xlarge --instance-count 3 \
+--use-default-roles --ec2-attributes KeyName=my-key-pair \
+--service-role arn:aws:iam::123456789012:role/YourEMRRole
+```
+
+Replace "**YourEMRRole**" with the name of the IAM role you created
+
+This IAM role will have the necessary permissions to access the S3 bucket specified in your Spark job or EMR steps
+
 ### 10.10. Terminate the AWS EMR Cluster
 
 When finishing your job run this command to terminate your AWS EMR cluster:
@@ -612,35 +693,35 @@ aws emr terminate-clusters --cluster-id ClusterId
 
 ### 10.11. What is the difference between "aws emr add-steps" and "spark-submit" commands
 
-**aws emr add-steps** is a command used to add a step to an Amazon EMR (Elastic MapReduce) cluster. 
+**aws emr add-steps** is a command used to add a step to an Amazon EMR (Elastic MapReduce) cluster
 
-It's a higher-level command provided by AWS to interact with their EMR service. 
+It's a higher-level command provided by AWS to interact with their EMR service 
 
-The example you've given is using this command to add a Spark step to an EMR cluster. 
+The example you've given is using this command to add a Spark step to an EMR cluster
 
-The step configuration includes details like the script location, Spark configuration, and other parameters.
+The step configuration includes details like the script location, Spark configuration, and other parameters
 
 
-**spark-submit** is a Spark-specific command used to submit a Spark application to a cluster. 
+**spark-submit** is a Spark-specific command used to submit a Spark application to a cluster
 
-In summary, the **aws emr add-steps** command is more focused on interacting with EMR clusters and adding steps to them, while **spark-submit** is specifically for submitting Spark applications to a cluster.
+In summary, the **aws emr add-steps** command is more focused on interacting with EMR clusters and adding steps to them, while **spark-submit** is specifically for submitting Spark applications to a cluster
 
-The **aws emr add-steps** command might involve additional AWS-specific configurations and could be part of a larger EMR workflow.
+The **aws emr add-steps** command might involve additional AWS-specific configurations and could be part of a larger EMR workflow
 
 #### May I use "spark-submit" without previously using "aws emr add-steps"?
 
-Absolutely! **spark-submit** is a standalone command and doesn't require the use of aws emr add-steps before using it. 
+Absolutely! **spark-submit** is a standalone command and doesn't require the use of aws emr add-steps before using it
 
-You can submit Spark applications directly using **spark-submit** without adding steps to an EMR cluster using the AWS EMR API.
+You can submit Spark applications directly using **spark-submit** without adding steps to an EMR cluster using the AWS EMR API
 
 Here's a breakdown:
 
-Use **aws emr add-steps** when you want to programmatically add steps (like Spark jobs) to an existing EMR cluster through the AWS EMR API. 
+Use **aws emr add-steps** when you want to programmatically add steps (like Spark jobs) to an existing EMR cluster through the AWS EMR API
 
-This is useful when you want to automate job submissions as part of a larger workflow.
+This is useful when you want to automate job submissions as part of a larger workflow
 
-Use spark-submit when you just want to submit a Spark application to a cluster manually. This is a more direct way of submitting Spark jobs and is often used for testing and interactive development.
+Use spark-submit when you just want to submit a Spark application to a cluster manually. This is a more direct way of submitting Spark jobs and is often used for testing and interactive development
 
-So, you can choose the approach that best fits your use case. 
+So, you can choose the approach that best fits your use case
 
-If you're automating job submissions to an EMR cluster, **aws emr add-steps** might be more suitable. If you just want to run a Spark job on an EMR cluster manually, you can use **spark-submit** directly.
+If you're automating job submissions to an EMR cluster, **aws emr add-steps** might be more suitable. If you just want to run a Spark job on an EMR cluster manually, you can use **spark-submit** directly
