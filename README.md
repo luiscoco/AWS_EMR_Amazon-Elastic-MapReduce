@@ -257,25 +257,25 @@ We leave the default values
 
 ### 7.12. Security configuration and EC2 key pair 
 
-Como paso previo tenemos que crear un Key-Pair y descargar su archivo en nuestro ordenador personal.
+As previous step we have to create a **Key-Pair** and download the **ppk** file in our hard disk
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/505e669d-fba6-4788-80bb-5f1a724f01b2)
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/91b15915-6517-43d6-a04f-a3aa9d74a997)
 
-Después de pulsar el valor de **"Create key pair"**, automáticamente se decarga el archivo **ppk** en nuestro ordenador
+After we press the **"Create key pair"** button, and automativally the **ppk** file is downloaded in our computer
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/6eb18812-7990-4235-a2bf-8c6e940e9d92)
 
-Una vez que hemos creado el archivo **ppk** lo cargamos para configurar la opción de seguridad de nuestro AWS EMR cluster
+Once we created the **ppk** file we load it for configuring the security option in the AWS EMR cluster
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/3dacbb4d-a0c8-4e67-b167-32a57a4b723b)
 
 ### 7.13. IAM (Identity and Access Management)
 
-Tenemos que crear el "Service Role" y el "Instance Profile" para las instancias EC2 de nuestro cluster.
+We create the "Service Role" and the "Instance Profile" for EC2 instances
 
-#### 7.13.1. Primero: creamos el "Service Role"
+#### 7.13.1. Creating the "Service Role"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ecbaeaeb-5c94-451d-a412-5a01a9e0abda)
 
@@ -291,7 +291,7 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c674c8b2-2c1e-4ebc-955d-45c2d5618c26)
 
-#### 7.13.2. Segundo: cremos el "Instance Profile"
+#### 7.13.2. Creating the "Instance Profile"
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/10c81cff-cccf-467d-8cec-57ba962d3c1b)
 
@@ -311,19 +311,19 @@ Le asignamos al nuevo role el nombre "EMR_DefaultRole", y pulsamos el botón cre
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/c2a39772-04f8-4a41-8da5-6c9de3990a79)
 
-### 7.14. Pulsamos el botón "Create cluster"
+### 7.14. Push the "Create cluster" buttton
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d95ff2c6-316e-44e5-ab00-82c9051b8225)
 
-### 7.15. Editamos el Security Group del Master
+### 7.15. Edit the Security Group in the Master node
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/d7a5953a-4df6-4ec0-9539-6f6d7bde4eca)
 
-Pulsamos en el botón "Edit Inbound Rules" 
+Press the button "Edit Inbound Rules" 
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/ecc96903-cc6e-4620-b99c-8942e9e8824c)
 
-Añadimos una regla más para el protocolo SSH puerto 22 desde mi IP y pulsamos el botón "Save Rules"
+Add another rule in the **SSH** protocol and **port 22** to access from **My IP** and press the **Save Rules** button
 
 ![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/82726647-979f-4daf-af86-8a1ec49b1114)
 
