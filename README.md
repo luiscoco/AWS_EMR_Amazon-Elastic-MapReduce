@@ -596,6 +596,6 @@ if __name__ == "__main__":
 
 When finishing your job run this command to terminate your AWS EMR cluster:
 
-````
+```
 aws emr terminate-clusters --cluster-id ClusterId
 ```
