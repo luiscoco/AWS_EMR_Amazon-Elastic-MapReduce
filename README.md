@@ -499,6 +499,12 @@ This command essentially creates an EMR cluster named "MyEMRCluster" with one m5
 
 **--log-uri s3://aws-logs-550146943653-eu-west-3/elasticmapreduce**: Specifies the Amazon S3 URI where the EMR logs should be stored. EMR logs contain information about the cluster's execution.
 
+Now we can list the AWS EMR cluster running this command
+
+```
+aws emr list-clusters
+```
+
 - Add steps to execute specific job or task by using AWS CLI
 
 - Check out
