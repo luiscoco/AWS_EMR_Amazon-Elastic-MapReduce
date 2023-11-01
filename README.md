@@ -438,12 +438,16 @@ These are the steps to follow in order to **create and run an AWS EMR cluster ur
   ```
   aws iam list-users
   ```
-  
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/969b078a-c600-4846-9052-057dfa069ef8)
+
   List all buckets in s3
 
   ```
   aws s3 ls
   ```
+
+![image](https://github.com/luiscoco/AWS_EMR_Amazon-Elastic-MapReduce/assets/32194879/5ece56fe-8914-443f-a074-599750023ef8)
 
 - To see the AWS CLI version, we run the command
 
