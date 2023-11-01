@@ -401,25 +401,39 @@ spark-shell
 
 ## 10. Create AWS EMR Cluster Using AWS CLI and Submit job
 
-VERY IMPORTANT see the ZIP file in this Github repo with a real example
+**NOTA IMPORTANTE!** see the ZIP file in this Github repo with a real example
 
 Youtube video: https://www.youtube.com/watch?v=XsWnW7-8IGQ
 
-These are the steps to follow in order to create and run an AWS EMR cluster uring AWS CLI:
+These are the steps to follow in order to **create and run an AWS EMR cluster uring AWS CLI**:
 
-- Install and configure CLI
+- In AWS create **IAM user**
 
-- Create a Key-Pair in EC2
+- Create  **Access Key ID and Access Key** for using later during AWS CLI configuration.
 
-- Create a S3 bucket "myemrproject" and inside several folders: "input", "logs", "scripts"
+- Install and configure **AWS CLI**
+
+  Type the command:
+
+  ```
+  aws configure
+  ```
+
+  Enter AWS Access Key ID and access key
+
+  And Region : eu-west-3
+
+- Create a **Key-Pair** in AWS EC2. See section 7.2.
+
+- Create a AWS **S3 bucket** "myemrproject" and inside several folders: "input", "logs", "scripts"
 
   Upload to the "input" folder the input data "product_data.csv"
 
   Upload to the "scripts" folder the application source code "mypysparkscript_1.py"
 
-- Create an AWS EMR cluster (previously create the AIM roles: EMR_DefaultRole and EMR_EC2_DefaultRole)
+- Create an **AWS EMR cluster** (previously create the AIM roles: EMR_DefaultRole and EMR_EC2_DefaultRole)
 
-- Add steps to execute specific job or task bu using AWS CLI
+- Add steps to execute specific job or task by using AWS CLI
 
 - Check out
 
